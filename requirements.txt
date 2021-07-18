@@ -1,0 +1,7 @@
+bs4
+pillow
+aiohttp
+pyrogram
+tgcrypto
+aiofiles
+pyshorteners
