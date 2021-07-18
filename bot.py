@@ -1,5 +1,5 @@
 # Licensed under GNU Affero General Public License v3.0
-# BS4 scaping by Sumit Jaiswal <https://github.com/ransomsumit>
+# BS4 scraping by Sumit Jaiswal <https://github.com/ransomsumit>
 # Pyrogram implementation and minor fix(s) by Jyothis <https://github.com/EverythingSuckz>
 
 import os
@@ -10,29 +10,26 @@ import logging
 import asyncio
 import aiofiles
 import traceback
-import urllib.parse
 import pyshorteners
-from PIL import Image
+import urllib.parse
 from io import BytesIO
-from PIL import ImageFont
-from PIL import ImageDraw
 from random import randint
 from threading import Thread
 from bs4 import BeautifulSoup as soup
 from pyrogram import Client, filters, idle
+from PIL import Image, ImageFont, ImageDraw
 from pyrogram.types import Message, CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup, InlineQuery, InlineQueryResultArticle, InputTextMessageContent
 
 chilp_it = pyshorteners.Shortener()
 
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=logging.WARNING,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 logging.getLogger("asyncio").setLevel(logging.WARNING)
 logging.getLogger("PIL").setLevel(logging.WARNING)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
-logging.basicConfig(level=logging.WARNING)
 
 loop = asyncio.get_event_loop()
 
